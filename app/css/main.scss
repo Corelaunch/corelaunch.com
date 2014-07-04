@@ -1,5 +1,15 @@
 ---
 ---
+// external deps
+@import 'normalize';
+@import 'bourbon/bourbon';
+@import 'base/grid-settings';
+@import 'neat/neat';
+@import 'base/base';
 
-@import 'base';
+// app deps
 @import 'modules/site';
+@import 'modules/jumbo';
+@import 'modules/content';
+@import 'modules/section';
+@import 'modules/footer';

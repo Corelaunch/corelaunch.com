@@ -1,13 +1,17 @@
 /* Site Module */
 
 /* header */
+$header-padding: golden-ratio(1em, -4) default;
 .site-header {
-  background: #1d1d1d;
-  .site-title { 
-    color: #fff;
-  }
+  text-align: center;
 }
 
 .site-title {
+  display: block;
   font-size: 2em;
+  @include pad($header-padding);
+}
+
+.site-nav {
+  @include pad($header-padding);
 }

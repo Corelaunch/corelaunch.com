@@ -1,0 +1,9 @@
+.section-row {
+  @include outer-container;
+  @include pad;
+}
+
+.section-header {
+  text-align: center;
+  margin: golden-ratio(1em, 1) 0;
+}

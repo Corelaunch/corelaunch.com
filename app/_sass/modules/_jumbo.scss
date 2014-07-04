@@ -1,0 +1,79 @@
+$jumbo-medium: new-breakpoint(min-width 31em 12);
+
+$jumbo-large: new-breakpoint(min-width 50em 12);
+
+.jumbo {
+  padding: 10%;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  p, h2, h3 {
+    color: #fff;
+  }
+}
+
+.jumbo-title {
+  color:#fff;
+  $j-title-size: golden-ratio(1em, 2);
+  font-size: $j-title-size;
+  @include media($jumbo-medium) {
+    font-size: golden-ratio(1em, 3);
+  }
+  @include media($jumbo-large) {
+    font-size: golden-ratio(1em, 4);
+  }
+}
+
+.jumbo-subheader {
+  color: #fff;
+  @include media($jumbo-medium) {
+    font-size: golden-ratio(1em, 1);
+  }
+  @include media($jumbo-large) {
+    font-size: golden-ratio(1em, 2);
+  }
+
+}
+
+.jumbo--homepage {
+  @extend .jumbo;
+  background-image: url('/images/frontpage.jpg');
+}
+
+.jumbo--homepagecallout {
+  @extend .jumbo;
+  background-image: url('/images/callout.jpg');
+}
+
+.jumbo-nav {
+  background: #1d1d1d;
+  text-align: center;
+  a {
+    display: inline-block;
+    color: #fff;
+    padding: 1em;
+    &:hover {
+      color: #1d1d1d;
+      background: #ccc;
+    }
+  }
+}
+
+.jumbo-nav__container {
+  @include outer-container;
+}
+
+.jumbo-logo {
+  margin: 0 auto;
+  max-width: em(420/5);
+  @include media($jumbo-medium) {
+    max-width: em(420/4);
+  }
+  @include media($jumbo-large) {
+    max-width: em(420/3);
+  }
+}
+
+.jumbo-cta {
+  @include button;
+}
