@@ -4,6 +4,12 @@
 $header-padding: golden-ratio(1em, -4) default;
 .site-header {
   text-align: center;
+  background: url('/images/site-header.jpg');
+  background-size: cover;
+  &, a {
+    color: #fff;
+  }
+  @include pad;
 }
 
 .site-title {
@@ -14,4 +20,10 @@ $header-padding: golden-ratio(1em, -4) default;
 
 .site-nav {
   @include pad($header-padding);
+  .page-link {
+    margin-left: 1em;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
 }

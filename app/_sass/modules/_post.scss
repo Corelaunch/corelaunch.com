@@ -1,0 +1,13 @@
+.post-content {
+  @include outer-container;
+  @include pad(0 default default);
+  max-width: 30em;
+}
+
+.post-header {
+  @include outer-container;
+  text-align: center;
+  h1 {
+    @include pad;
+  }
+}
